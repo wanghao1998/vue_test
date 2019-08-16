@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<!--1.引入vue.js
+2.创建vue对象
+    el:指定element（选择器）
+    data：初始数据
+3.双向数据绑定：v-model
+4.显示数据:{{xxx}}
+5，理解vue的mvvm实现-->
+<div id="app">
+    <input type="text" v-model="message">
+    <p>{{message}}</p>
+</div>
+</body>
+<script type="text/javascript">
+    //创建vue实例  Vue是一个vue。js库提供的构建函数
+    const app = new Vue({//配置对象，属性名必须是指定的一些名称
+        el:'#app',//element选择器字符串，表明将表面那些元素交给vue管理
+        data:{
+            message:'Hello World'
+        }
+    });
+    app.message='qqai'
+    /*
+    * m  mmodel  模型，数据对象（data）
+    * v  view  视图模板页面
+    * v  viewModel 视图模型（vue的实例）
+    * m
+    *
+    * */
+</script>
+</html>
